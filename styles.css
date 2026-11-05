@@ -3,12 +3,12 @@
     font-family: Arial, sans-serif;
 
     /*availability table colors*/
-    --color0: #f0f0f0;
-    --color1: #e0e0e0;
-    --color2: #d0d0d0;
-    --color3: #c0c0c0;
-    --color4: #b0b0b0;
-    --color5: #a0a0a0;
+    --color0: #ff0000;
+    --color1: #ff5050;
+    --color2: #ff8585;
+    --color3: #ffb5b5;
+    --color4: #ffc8c8;
+    --color5: #ffffff;
 
     /*border types*/
     --solid-border: 1px solid black;
@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #dddddd;
     width: 100vw;
     height: 100vh;
 }
@@ -42,9 +42,17 @@ table {
     width: 50rem;
 }
 
+table caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-left: 4rem;
+}
+
 td {
     border-right: var(--solid-border);
     border-left: var(--solid-border);
+    padding: 0.75rem;
 }
 
 .sharp td {
@@ -53,4 +61,79 @@ td {
 
 .half td {
     border-bottom: var(--dashed-border);
+}
+
+.none td {
+    border-right: none;
+    border-left: none;
+}
+
+th[scope="col"] {
+    border-bottom: var(--solid-border);
+}
+
+.time {
+    width: 4rem;
+    text-align: center;
+}
+
+.available-0 {
+    background-color: var(--color0);
+}
+
+.available-1 {
+    background-color: var(--color1);
+}
+
+.available-2 {
+    background-color: var(--color2);
+}
+
+.available-3 {
+    background-color: var(--color3);
+}
+
+.available-4 {
+    background-color: var(--color4);
+}
+
+.available-5 {
+    background-color: var(--color5);
+}
+
+#legend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#legend-line {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    margin-top: 1rem;
+}
+
+#legend-line span {
+    margin: 0 1rem;
+}
+
+#legend-gradient{
+    width: 100%;
+    height: 1rem;
+    background-image: linear-gradient(to right, 
+        var(--color0) 0%,
+        var(--color0) 17%,
+        var(--color1) 17%,
+        var(--color1) 34%, 
+        var(--color2) 34%,
+        var(--color2) 51%,
+        var(--color3) 51%,
+        var(--color3) 68%,
+        var(--color4) 68%,
+        var(--color4) 85%,
+        var(--color5) 85%,
+        var(--color5) 100%
+    );
 }
